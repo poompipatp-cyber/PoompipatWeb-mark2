@@ -1,0 +1,212 @@
+/* General styles */
+:root {
+  --primary-color: oklch(65% 0.25 260);
+  --secondary-color: oklch(85% 0.15 260);
+  --text-color: oklch(20% 0.02 260);
+  --bg-color: oklch(98% 0.01 260);
+  --card-bg-color: oklch(100% 0 0);
+  --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  --border-radius: 8px;
+  --font-family: 'Inter', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: oklch(75% 0.2 260);
+    --secondary-color: oklch(60% 0.15 260);
+    --text-color: oklch(95% 0.02 260);
+    --bg-color: oklch(20% 0.02 260);
+    --card-bg-color: oklch(25% 0.02 260);
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding-top: 60px; /* Add padding to body to avoid content overlapping with fixed navbar */
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-bg-color);
+  padding: 1rem 2rem;
+  box-shadow: var(--card-shadow);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--card-bg-color);
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .navbar-links-container.active {
+    display: block;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Container for the main content */
+.container {
+  container-type: inline-size;
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+  padding-block: 2rem;
+  text-align: center;
+}
+
+/* Card component */
+.card {
+  background-color: var(--card-bg-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 5cqw, 3.5rem);
+  margin-bottom: 2rem;
+}
+
+#p1 {
+  font-size: clamp(1.25rem, 3cqw, 1.5rem);
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* Button styles */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-block-start: 1rem;
+}
+
+button:hover, button:focus-visible {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Gallery styles */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.project-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-title {
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-title p {
+  margin: 0;
+  font-weight: 500;
+}
+
+
+/* Add a google font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
