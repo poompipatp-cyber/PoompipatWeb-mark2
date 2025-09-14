@@ -64,3 +64,12 @@ A simple "Hello World" web page with modern styling, including a responsive card
     - The router dynamically loads page content into the `index.html` shell without full page reloads.
     - The router handles browser history (back/forward buttons) using the History API.
 - **"About Me" Page**: Created a new page at `/about` with personal information. Added a link to this page in the main navigation bar.
+
+## Current Plan: Enhance Project Page
+
+- **Objective**: Create a visually appealing and informative project section.
+- **Steps**:
+    1. **Create Project Cards**: Design individual cards for each project, including an image, title, a brief description, and a link to view more details.
+    2. **Grid Layout**: Arrange the project cards in a responsive grid that adapts to different screen sizes.
+    3. **Add Content**: Populate the `project.html` file with the new card-based layout and placeholder content for three projects.
+    4. **Refine Styling**: Add specific styles to `style.css` for the project cards and grid to ensure they match the overall design aesthetic.

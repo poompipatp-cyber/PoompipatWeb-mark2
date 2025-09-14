@@ -14,7 +14,8 @@ const navigate = (path) => {
 const handleLocation = async () => {
   const path = window.location.pathname;
   const route = routes[path] || routes[404];
-  const html = await fetch('/' + route).then((data) => data.text());
+  // FIX: Removed the leading slash '/' from the fetch request
+  const html = await fetch(route).then((data) => data.text());
   document.getElementById('app').innerHTML = html;
 };
 

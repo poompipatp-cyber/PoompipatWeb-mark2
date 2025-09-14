@@ -1,0 +1,16 @@
+{
+  "name": "poompipatweb-mark2",
+  "version": "1.0.0",
+  "description": "This is a simple \"Hello World\" web project that demonstrates modern web development techniques, including:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server --entry-file=index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
