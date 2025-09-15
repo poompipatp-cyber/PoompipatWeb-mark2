@@ -1,7 +1,54 @@
 <div class="container">
-    <div class="card">
-      <h1>Hello, world!</h1>
-      <p id="p1">This is P1</p>
-      <button onclick="console.log('hello');">Press me</button>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Poompipat Phowee</h1>
+      <p class="hero-subtitle">Creative Web Developer & Designer</p>
+      <p class="hero-description">
+        I build beautiful, responsive, and user-friendly websites that not only look good but also solve real-world problems. Welcome to my personal space on the web!
+      </p>
+      <a href="/project" class="btn btn-primary" data-link>View My Work</a>
     </div>
-  </div>
+    <div class="hero-image-container">
+      <img src="/assets/images/Poompipat-Phowee.png" alt="Poompipat Phowee" class="hero-image">
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about-summary" class="home-section">
+    <h2 class="section-title">About Me</h2>
+    <p>I'm a passionate developer with a love for clean code, modern design, and pixel-perfect experiences. I thrive on turning complex ideas into simple, elegant solutions. <a href="/about" data-link>Learn more...</a></p>
+  </section>
+
+  <!-- Projects Preview Section -->
+  <section id="projects-preview" class="home-section">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="project-gallery-preview">
+      <!-- Project 1 -->
+      <div class="card">
+        <a href="/project" data-link>
+          <img src="/pages/projects/ProjectImages/original-1502350714452.jpg" alt="Project 1 Image" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Project One</h3>
+            <p class="card-description">A creative web application showcasing modern frontend technologies.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Project 2 -->
+      <div class="card">
+        <a href="/project" data-link>
+          <img src="https://placehold.co/600x400/1e293b/ffffff" alt="Project 2 Image" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Project Two</h3>
+            <p class="card-description">An innovative e-commerce platform with a focus on user experience.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="section-link">
+      <a href="/project" class="btn" data-link>See All Projects</a>
+    </div>
+  </section>
+
+</div>

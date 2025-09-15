@@ -19,9 +19,9 @@ A simple "Hello World" web page with modern styling, including a responsive card
   - `main.js`: Main JavaScript file (imports other components).
   - `router.js`: A simple client-side router.
 - `components/`: Folder for reusable Web Components.
-  - `navbar.html`: HTML structure for the navigation bar.
   - `navbar.js`: Defines the `<main-navbar>` custom element.
 - `images/`: Folder for project images.
+- `assets/images/`: Folder for asset images.
 - `blueprint.md`: This file, documenting the project.
 
 ## Styling and Design
@@ -41,7 +41,6 @@ A simple "Hello World" web page with modern styling, including a responsive card
 - **`<main-navbar>` (Web Component)**:
     - A reusable, encapsulated navigation bar.
     - Defined in `components/navbar.js`.
-    - Fetches its HTML from `components/navbar.html` and styles from `styles/style.css`.
     - Includes a brand name and links.
     - Responsive design that collapses into a hamburger menu on smaller screens.
 - **Card**: A container with a background, padding, border-radius, and shadow.
@@ -53,23 +52,44 @@ A simple "Hello World" web page with modern styling, including a responsive card
 - **Initial Setup**: Basic HTML, CSS, and JS files.
 - **Modern Styling**: Implemented a modern design with a card-based layout, light/dark mode, and custom fonts.
 - **Navbar Refactoring (Web Component)**:
-    - Replaced the static navbar in all HTML files with a reusable `<main-navbar>` Web Component.
-    - Created `components/navbar.js` to define the custom element and its behavior (including the hamburger menu toggle).
-    - Separated the navbar's HTML into `components/navbar.html`.
-    - This makes the navbar easier to maintain and update across the entire site from a single source.
+    - Replaced the static navbar with a reusable `<main-navbar>` Web Component.
 - **Project Gallery**: Created a responsive grid-based gallery on the `project.html` page.
 - **File Structure**: Organized files into `pages`, `styles`, `scripts`, `components`, and `images` folders for better maintainability.
 - **Client-Side Routing**: 
     - Implemented a simple client-side router in `scripts/router.js` to create a single-page application (SPA).
-    - The router dynamically loads page content into the `index.html` shell without full page reloads.
-    - The router handles browser history (back/forward buttons) using the History API.
-- **"About Me" Page**: Created a new page at `/about` with personal information. Added a link to this page in the main navigation bar.
+- **"About Me" Page**: Created a new page at `/about` with personal information.
+- **SPA Routing Fix**: Corrected relative asset paths to work with the client-side router, preventing 404 errors on refresh.
 
-## Current Plan: Enhance Project Page
+---
 
-- **Objective**: Create a visually appealing and informative project section.
-- **Steps**:
-    1. **Create Project Cards**: Design individual cards for each project, including an image, title, a brief description, and a link to view more details.
-    2. **Grid Layout**: Arrange the project cards in a responsive grid that adapts to different screen sizes.
-    3. **Add Content**: Populate the `project.html` file with the new card-based layout and placeholder content for three projects.
-    4. **Refine Styling**: Add specific styles to `style.css` for the project cards and grid to ensure they match the overall design aesthetic.
+## **Current Plan: Website Modernization (v2)**
+
+### **Objective:**
+To transform the existing website into a visually stunning, modern, and professional personal portfolio. The update will focus on a bold aesthetic, improved user experience, and the incorporation of advanced design elements.
+
+### **Plan Details:**
+
+1.  **Homepage Revamp (`home.html`):**
+    *   **Hero Section:** Introduce a full-width hero section with a captivating headline, a personal introduction, and a clear call-to-action (CTA) button (e.g., "View My Work").
+    *   **Personalization:** Integrate the profile image (`assets/images/Poompipat-Phowee.png`) into the hero section to create a strong personal brand.
+    *   **Content Sections:** Add structured sections for "About Me," "My Projects," and "Contact," providing a quick overview and linking to the respective pages.
+
+2.  **Global Stylesheet Overhaul (`styles/style.css`):**
+    *   **Color Palette:** Implement a new, vibrant, and energetic color palette using `oklch`.
+    *   **Background Texture:** Apply a subtle noise texture to the main background for a premium, tactile feel.
+    *   **Depth & Shadow:** Utilize multi-layered drop shadows on cards and interactive elements to create a sense of depth and a "lifted" appearance.
+    *   **Interactive Glow:** Add a "glow" effect to buttons and other interactive elements on hover/focus to enhance user feedback.
+    *   **Typography:** Refine the typographic scale with more expressive and hierarchical font sizes for headings, subheadings, and body text.
+    *   **Animation:** Introduce subtle animations and transitions for a smoother, more dynamic user experience.
+
+3.  **Component Enhancements:**
+    *   **Project Cards (`project.html`):** Redesign project cards with improved hover effects, cleaner layouts, and the new shadow style.
+    *   **Buttons:** Restyle all buttons to be more prominent and interactive, incorporating the new color and glow effects.
+
+4.  **Content Structuring:**
+    *   **About Page (`about.html`):** Reformat the page for better readability, potentially including the profile image.
+    *   **Resume Page (`resume.html`):** Organize the resume into clear, scannable sections (e.g., Work Experience, Education, Skills, Certifications).
+
+5.  **Accessibility & Responsiveness:**
+    *   Ensure all new designs and components are fully responsive across mobile, tablet, and desktop screens.
+    *   Verify that the color contrast ratios and keyboard navigation meet a11y standards.

@@ -1,6 +1,119 @@
 <div class="container">
-  <div class="card">
-    <h1>My Resume</h1>
-    <p>This is my resume.</p>
+  <h1 class="page-title">My Resume</h1>
+  <p class="page-intro">A summary of my professional experience, skills, and education.</p>
+
+  <div class="resume-container">
+    <!-- Work Experience Section -->
+    <section class="resume-section card">
+      <h2 class="resume-section-title">Work Experience</h2>
+      <div class="resume-item">
+        <h3 class="resume-item-title">Creative Web Developer</h3>
+        <p class="resume-item-subtitle">Innovatech Solutions | 2021 - Present</p>
+        <ul class="resume-item-details">
+          <li>Developed and maintained responsive, high-performance websites for a diverse range of clients.</li>
+          <li>Collaborated with designers and project managers to translate mockups and requirements into functional web applications.</li>
+          <li>Implemented modern frontend practices, including Web Components, ES Modules, and performance optimization techniques.</li>
+        </ul>
+      </div>
+      <div class="resume-item">
+        <h3 class="resume-item-title">Junior Frontend Developer</h3>
+        <p class="resume-item-subtitle">Digital Creations Co. | 2019 - 2021</p>
+        <ul class="resume-item-details">
+          <li>Assisted in the development of user-facing features using HTML, CSS, and JavaScript.</li>
+          <li>Participated in code reviews and learned to write clean, maintainable code.</li>
+          <li>Gained experience with version control systems (Git) and agile development methodologies.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="resume-section card">
+      <h2 class="resume-section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <p>HTML5, CSS3, JavaScript (ES6+)</p>
+        </div>
+        <div class="skill-category">
+          <h4>Technologies</h4>
+          <p>Web Components, Three.js, Firebase, Git</p>
+        </div>
+        <div class="skill-category">
+          <h4>Design</h4>
+          <p>Responsive Design, UI/UX Principles, Figma</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="resume-section card">
+      <h2 class="resume-section-title">Education</h2>
+      <div class="resume-item">
+        <h3 class="resume-item-title">Bachelor of Science in Computer Science</h3>
+        <p class="resume-item-subtitle">University of Technology | 2015 - 2019</p>
+      </div>
+    </section>
+
   </div>
 </div>
+
+<style>
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: left;
+}
+
+.resume-section {
+  padding: 2rem;
+}
+
+.resume-section-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid oklch(from var(--text-color) l c h / 10%);
+  padding-bottom: 0.5rem;
+}
+
+.resume-item {
+  margin-bottom: 1.5rem;
+}
+
+.resume-item-title {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.resume-item-subtitle {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.resume-item-details {
+  padding-left: 20px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.skill-category p {
+  margin: 0;
+  opacity: 0.9;
+}
+</style>

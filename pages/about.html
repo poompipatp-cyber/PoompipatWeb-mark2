@@ -1,4 +1,80 @@
 <div class="container">
-  <h1>About Me</h1>
-  <p>This is the about me page.</p>
+  <h1 class="page-title">About Me</h1>
+  <p class="page-intro">A little more about my journey, my passions, and what drives me.</p>
+
+  <div class="about-content">
+    <div class="about-image-container">
+      <img src="/assets/images/Poompipat-Phowee.png" alt="Poompipat Phowee" class="about-image">
+    </div>
+    <div class="about-text">
+      <h2>Hello, I'm Poompipat!</h2>
+      <p>
+        I am a creative and passionate web developer with a keen eye for design and a strong foundation in modern web technologies. My journey into the world of coding began with a simple curiosity, which has since blossomed into a full-fledged passion for building elegant, efficient, and user-centric digital experiences.
+      </p>
+      <p>
+        My expertise lies in turning ideas into reality, from the initial concept and design mockups to a fully functional and responsive website. I am proficient in HTML, CSS, and JavaScript, and I am always excited to learn and experiment with new frameworks and libraries.
+      </p>
+      <p>
+        When I'm not coding, you can find me exploring the latest design trends, contributing to open-source projects, or enjoying a good cup of coffee while planning my next creative endeavor.
+      </p>
+      <div class="about-contact">
+        <h3>Let's Connect</h3>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out!</p>
+        <a href="mailto:your.email@example.com" class="btn btn-primary">Contact Me</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<style>
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 4rem;
+  }
+
+  @media (min-width: 992px) {
+    .about-content {
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+    }
+  }
+
+  .about-image-container {
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 5px solid var(--card-bg-color);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 0;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-contact {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+  }
+</style>
